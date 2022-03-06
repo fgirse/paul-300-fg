@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable prettier/prettier */
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'

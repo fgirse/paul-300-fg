@@ -142,7 +142,10 @@ return(
                 className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 font-sans text-xl font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 md:text-4xl lg:mb-6"
               >
                 <a className="ui btn" href="mailto:rettungsanker-freiburg@gmx.de?Subject=Enquiry">
-                  <MailIcon className="mr-1 inline h-12 w-12 fill-slate-700" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+</svg>
                   SOS Rettungsanker
                 </a>
               </button>
