@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add EmblaCarouselButtons
+  C:\Program Files\nodejs\node.exe C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @heroicons/react/solid
 
 PATH: 
   C:\Python310\Scripts\;C:\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;;C:\Program Files\Git LFS;C:\Program Files\nodejs\;C:\Users\fgirs\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\GitHub CLI\;C:\Users\fgirs\AppData\Roaming\npm;C:\Users\fgirs\AppData\Local\Programs\mongosh\;C:\Users\fgirs\AppData\Local\gitkraken\bin
@@ -14,8 +14,8 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/EmblaCarouselButtons: Not found
-      at Request.params.callback [as _callback] (C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
+  Error: https://registry.yarnpkg.com/@heroicons%2freact/solid: Request "https://registry.yarnpkg.com/@heroicons%2freact/solid" returned a 405
+      at Request.params.callback [as _callback] (C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67038:18)
       at Request.self.callback (C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
       at Request.emit (node:events:390:28)
       at Request.<anonymous> (C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141855:10)
