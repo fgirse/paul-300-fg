@@ -44,7 +44,7 @@ export default function event() {
                     </svg>
                   <span className="text-bold text-yellow-600">
                     <a href>weitere Infos</a>
-                  </span>{' '}
+                  </span>
                   Sprechen Sie uns an oder kontaktieren Sie uns per mail
                 </p>
                 <div className="p-6 relative flex flex-col sm:flex-row sm:space-x-4">

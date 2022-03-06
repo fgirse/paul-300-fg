@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
-import { InformationCircleIcon } from 'heroicons-react'
 import Arena from './icons/svg/SVGArena'
 
 export default function MyModal5() {
@@ -66,7 +65,9 @@ export default function MyModal5() {
               leaveTo="opacity-0 scale-95"
             >
               <div className="inline-block w-full max-w-7xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-gray-800 bg-opacity-100 border border-white shadow-xl rounded-2xl">
-                <InformationCircleIcon className="-mt-6 p-2 w-16 h-16 inline lg:h-16 lg:w-16 text-yellow-600" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#797979">
+  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+</svg>
                 <Dialog.Title
                   as="h3"
                   className="ml-3 headingA inline mt-16 lg:text-stroke-11 text-[2rem] text-center font-bold leading-6 text-yellow-600 md:text-6xl lg:mt-24 lg:text-5xl"
