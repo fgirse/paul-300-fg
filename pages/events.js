@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Modal5 from '../components/Modal5.js'
-import { InformationCircleIcon } from '@heroicons/react'
+import { InformationCircleIcon } from '@heroicons/react/solid'
 import Saxophone from '../components/icons/svg/SVGSaxophoneWeiss'
 
 export default function event() {

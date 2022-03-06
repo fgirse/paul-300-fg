@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
-import { InformationCircleIcon } from '@heroicons/react'
+import { InformationCircleIcon } from '@heroicons/react/solid'
 import Arena from './icons/svg/SVGArena'
 
 export default function MyModal5() {

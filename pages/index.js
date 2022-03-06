@@ -6,7 +6,7 @@ import Arena from '../components/icons/svg/SVGArena'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import Modal6 from '../components/Modal6'
-import { MailIcon } from '@heroicons/react'
+import { MailIcon } from '@heroicons/react/solid'
 import Flensburger from "../components/icons/svg/SVGFlensburger";
 import Ganter from "../components/icons/svg/SVGGanter";
 import Astra from "../components/icons/svg/SVGAstra";
