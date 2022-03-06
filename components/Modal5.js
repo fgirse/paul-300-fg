@@ -23,6 +23,7 @@ export default function MyModal5() {
           type="button"
           onClick={openModal}
           className="w-max-lg text-1xl px-4 py-6 lg:text-4xl font-bold text-white bg-slate-300 hover:bg-slate-500 rounded-md bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+        // eslint-disable-next-line react/jsx-no-undef
         ><InformationCircleIcon className='w-12 h-12 fill-slate-700 inline'/>
           weitere Info 
         </button>
