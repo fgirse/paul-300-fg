@@ -14,6 +14,7 @@ import Astraflasche from"/components/icons/svg/SVGAstraflasche";
 import Skyline from "../components/icons/svg/SVGSkyline_weiss_3.js";
 import SCLogo from "../components/icons/svg/SCLogo";
 import FlensDose from '../components/icons/svg/SVGFlensdose';
+import LogoNeu from '../components/icons/svg/SvgLogoNeu'
 import Image from "next/image";
 import sketchy from "theme-ui-sketchy-preset";
 import EmblaCarousel from "../components/Slider/EmblaCarousel";
@@ -71,7 +72,7 @@ export default function Home({ posts }) {
 return(
 <>
 
-<section className="mt-5 mx-auto flex-grow-1 border-t-4 border-b-4 border-amber-400 bg-[url('/Hero4.png')] w-full h-[calc(100vh-40vh)] bg-contain bg-center md:bg-[url('/Hero.png')] md:bg-cover bg-no-repeat md:w-[100vw] md:h-[calc(100vh-12vh-16vh)]">
+<section className="mt-5 mx-auto flex-grow-1 border-t-4 border-b-4 border-amber-400 bg-[url('/Hero4.png')] w-full h-[calc(100vh-36vh)] bg-contain bg-center md:bg-[url('/Hero.png')] md:bg-cover bg-no-repeat md:w-[100vw] md:h-[calc(100vh-12vh-16vh)]">
 
 </section>
   <section className="hidden lg:block lg:mx-auto lg:mt-2 lg:rounded-3xl lg:w-screen bg-slate-900 lg:h-[14vh] ">
@@ -104,17 +105,17 @@ return(
                 >
                   Freitag und Samstag: 15 bis 03 Uhr
                 </p>
-                <p className="sm:text-1xl xl:text- text-center text-lg  text-gray-300 md:text-base lg:text-xl">
+                <p className="sm:text-1xl xl:text- text-center text-base  text-gray-300 md:text-base lg:text-xl">
                   Sonntag: Ruhetag
                 </p>
               </div>
               {/*================================================ Modale6 =======================================================================================*/}
-              <div className="mx-auto mt-16 h-24 w-11/12 rounded-2xl bg-orange-600 px-8 text-4xl hover:bg-slate-500 md:hidden">
-                <Modal6 className="h-8"></Modal6>
+              <div className="mx-auto mt-12 h-28 w-11/12 rounded-2xl bg-orange-600 px-8 text-4xl hover:bg-slate-500 md:hidden">
+                <Modal6 className="mt-3"></Modal6>
               </div>
               {/*=============n=================================== Modale6 ende =======================================================================================*/}
 
-              <div className="-gray-700 mx-auto mt-5 flex w-11/12 flex-col items-center rounded-2xl border bg-red-900 shadow-md dark:bg-gray-800 md:flex-row lg:w-11/12 ">
+              <div className="-gray-700 mx-auto mt-5 bg-gray-900 shadow-lg shadow-yellow-400/50 flex w-11/12 flex-col items-center rounded-2xl border md:bg-red-900 dark:bg-gray-800 md:flex-row lg:w-11/12 ">
                 <img className="p-3" src="/portrait-mick1.png" alt="portrait" />
                 <div className="flex w-full flex-col justify-between p-4 leading-normal">
                   <h5 className="mb-5 text-2xl font-bold tracking-tight text-yellow-500 dark:text-white xl:text-5xl">
@@ -149,30 +150,29 @@ return(
                   SOS Rettungsanker
                 </a>
               </button>
-              <p className="mt-5 text-justify text-sm text-white">
+              <p className="mt-5 relative z-30 text-justify text-sm text-white">
                 Schreiben Sie uns gerne Ihre Eindrücke zu Ihrem Besuch im Rettungsanker. Am
                 wichtigsten aber: geben Sie uns Reflexion, wenn etwas nicht zu Ihrer Zufriedenheit
                 vorgefallen ist! Nur so können wir uns als Ihr Gastgeber stetig verbessern und Ihnen
-                als Gast zukünftig noch besser gerechtwerden.{' '}
+                als Gast zukünftig noch besser gerechtwerden.
               </p>
-              unseren Gästen
-            </div>
+                 </div>
           </section>
 
           {/*========================== ENDE SECTION A =================================================*/}
 
-           <div className="mt-12 flex flex-col md:flex md:flex-row items-baseline">
-            <div className="w-4/12 absolute left-32 transform translate-y-36 md:relative md:transform md:-translate-y-10 md:w-3/12 xl:w-3/12 xl:transform: xl:-translate-y-48">
+           <div className="mt-15 flex flex-col md:flex md:flex-row items-baseline">
+            <div className="w-4/12 absolute left-32 transform translate-y-4 md:relative md:transform md:-translate-y-10 md:w-3/12 xl:w-2/12 xl:transform: xl:-translate-y-48">
               <Image
                 src="/lighthousebw.svg"
-                cIOIC
+                
                 alt="illustration"
                 layout="responsive"
                 height={473}
                 width={473}
               />
             </div>
-            <div className=" absolute w-4/12  left-36 p-2 transform translate-y-[55vh] md:static md:py-0 md:w-8/12 md:right-16 lg:w-3/12 xl:w-3/12 float-right md:transform md:translate-y-0 xl:transforn z-20 xl:-translate-y-[5vh]">
+            <div className="absolute w-4/12  left-36 p-2 transform translate-y-[37vh] md:static md:py-0 md:w-8/12 md:right-16 lg:w-3/12 xl:w-3/12 float-right md:transform md:translate-y-0 xl:transforn xl:-translate-y-[5vh]">
               <Image
                 className=""
                 src="/Astraballons.png"
@@ -182,7 +182,7 @@ return(
                 width={1739}
               />
             </div>
-          6<div className=" absolute right-5 transform translate-y-12 md:transform:-md:translate-y-6 lg:w-3/12 xl:transform xl:translate-y-[14vh]">
+          6<div className=" -order-1 right-5 absolute transform translate-y-12 md:transform:-md:translate-y-6 lg:w-3/12 xl:transform xl:translate-y-[14vh]">
               <Image
                 src="/rettungsring.png"
                 alt="illustration"
@@ -203,10 +203,11 @@ return(
           </div>
 
           {/*======================================= Section B =======================================================================*/}
-          <section className="mt-[0vh] xl:-mt-48 xl:p-12">
+          <section className="-mt-[18vh] xl:-mt-48 xl:p-12">
             <div className="grid overflow-hidden grid-cols-1 md:grid md:grid-cols-3 grid-rows-2 gap-3">
-              <div className="mx-auto w-10/12 md:w-11/12">
+              <div className="relative z-40 mx-auto w-10/12 md:w-11/12">
                 <Image
+                  className='relative z-40'
                   width="619"
                   height="696"
                   src="/bulleye.png"
@@ -237,13 +238,13 @@ return(
 
           {/*======================================= Ende Section B =======================================================================*/}
 
-          <h1 className="mt-10 headingA relative left-1 text-[3rem] text-yellow-500 text-center md:text-8xl lg:text-[10rem] xl:-mt-[66vh]">
+          <h1 className="mt-10 headingA relative left-1 text-[3rem] text-yellow-500 text-center md:text-8xl lg:text-[10rem] xl:-mt-[68vh]">
             Die Kneipe
           </h1>
 
           {/*========================================================== section E ===============================================================*/}
 
-          <section className=" xl:mt-[16vh]">
+          <section className=" xl:mt-[12vh]">
             <div className="container mx-auto rounded-2xl bg-slate-800 w-11/12">
               <p className="lg:newspaperB lg:mt-0 text-gray-100  text-lg px-4 lg:-mb-16 lg:text-3xl lg:leading-10">
                 Gemütlich nordisches Ambiente im Herzen der Altstadt Freiburgs
@@ -265,7 +266,7 @@ return(
             </div>
 
             <ThemeProvider theme={theme}>
-              <div className="-mt-20 mx-auto p-16 lg:mt-20 lg:w-11/12 lg:max-w-8xl grid grid-cols-1 justify-center items-center md:p-6  md:grid-cols-3 md:justify-around lg:item11s-center lg:gap-x-5">
+              <div className="-mt-1 mx-auto p-16 lg:mt-20 lg:w-11/12 lg:max-w-8xl grid grid-cols-1 justify-center items-center md:p-6  md:grid-cols-3 md:justify-around lg:item11s-center lg:gap-x-5">
                 <Card
                   className="justify-self-center"
                   mb={3}
@@ -363,7 +364,7 @@ return(
             </ThemeProvider>
           </section>
           {/*========================================================== section E =ende ==============================================================*/}
-          <h1 className="z-20 relative headingB text-[2rem] text-center text-gray-50 lg:headingA lg:text-yellow-500 lg:text-[4.66rem] lg:mt-24">
+          <h1 className="z-20 relative headingB text-[2rem] text-center text-gray-50 lg:headingA lg:text-yellow-500 lg:text-[4.66rem] lg:mt-20">
             Impressionen Rettungsanker
           </h1>
           <div className="w-3/12 lg:w-3/12 lg:p-8 lg:transform lg:-translate-y-16 xl:transform xl-translate-y-16">
@@ -378,7 +379,7 @@ return(
           {/*========================================================== section F ==============================================================*/}
           
             
-                      <section className=" md:-mt-60lllllllllk mx-auto">
+                      <section className=" md:-mt-60 mx-auto">
                         <div className="mx-auto ">
                                                 <EmblaCarousel slides={slides} />
                         </div>
@@ -390,18 +391,13 @@ return(
           {/*========================================================== section F ende==============================================================*/}
 
           {/*========================================================== section G =================================================*/}
-          <section className="">
+          <section className="flex flex-col items-center">
             <div>
               <hr className="w-48 mt-12 mx-auto md:w-9/12" />
 
               <div className="w-36 mt-6 md:mt-20 mx-auto md:w-2/12 lg:m">
-                <Image
-                  src="/LogoNeu.png"
-                  alt="LogoNeu"
-                  layout="responsive"
-                  height="1060"
-                  width="1920"
-                />
+                <LogoNeu className="w-48 h-48 lg:w-60 lg:h-60"></LogoNeu>
+                  
               </div>
 
               <h1 className="headingB text-white mt-2 text-[3rem] text-center lg:headingA lg:text-[6rem] lg:text-gray-600">

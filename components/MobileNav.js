@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useState } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
@@ -21,7 +22,7 @@ const MobileNav = () => {
     <div className="sm:hidden">
       <button
         type="button"
-        className="ml-1 mr-1 h-8 w-8 rounded py-1"
+        className="w-8 h-8 py-1 ml-1 mr-1 rounded"
         aria-label="Toggle Menu"
         onClick={onToggleNav}
       >
@@ -29,7 +30,7 @@ const MobileNav = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="text-gray-900 dark:text-gray-100"
+          className="text-slate-200 dark:text-gray-100"
         >
           {navShow ? (
             <path
@@ -47,22 +48,22 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed top-24 right-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${
+        className={`z-20 fixed w-full h-full top-27 right-0 bg-slate-600 dark:bg-gray-800 opacity-95 transform ease-in-out duration-300 ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <button
           type="button"
           aria-label="toggle modal"
-          className="fixed h-full w-full cursor-auto focus:outline-none"
+          className="fixed w-full h-full cursor-auto focus:outline-none"
           onClick={onToggleNav}
         ></button>
-        <nav className="fixed mt-8 h-full">
+        <nav className="fixed w-screen h-full mt-8 border-b border-slate-800">
           {headerNavLinks.map((link) => (
-            <div key={link.title} className="px-12 py-4">
+            <div key={link.title} className="border border-slate-800 shadow-2xl shadow-slate-800/70 hower:bg-amber-600  px-12 py-4 ">
               <Link
                 href={link.href}
-                className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                className="text-2xl uppercase font-bold w-screen tracking-widest text-gray-300 hover:bg-amber-600   hover:text-red-800 dark:text-gray-100"
                 onClick={onToggleNav}
               >
                 {link.title}
