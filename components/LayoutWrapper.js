@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/SvgLogoNeu'
@@ -6,12 +7,12 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import InfoBar from './InfoBar'
+import InfoBar from '../components/InfoSection'
 
 const LayoutWrapper = ({ children }) => {
   return (
     <>
-      <InfoBar></InfoBar>
+      <InfoBar/>
       <SectionContainer>
         <div className="flex h-screen flex-col justify-between bg-slate-900">
           <header className="mt-2 flex items-end justify-between p-2">
@@ -37,7 +38,7 @@ const LayoutWrapper = ({ children }) => {
                   <Link
                     key={link.title}
                     href={link.href}
-                    className="font-bold uppercase text-gray-100  hover:border-b hover:border-yellow-400 hover:text-yellow-400 dark:text-gray-100 dark:hover:text-sky-700 sm:p-4 lg:text-xl 2xl:text-3xl"
+                    className="font-bold uppercase text-gray-100  hover:border-b hover:border-yellow-400 hover:text-yellow-400 dark:text-gray-100 dark:hover:text-sky-700 sm:p-4 lg:text-[.666rem] xl:text-[1rem] 2xl:text-[1.333rem]"
                   >
                     {link.title}
                   </Link>

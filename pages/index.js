@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable prettier/prettier */
 import Link from '@/components/Link'
+import ReactDOM from "react-dom";
 import { PageSEO } from '@/components/SEO'
 import Arena from '../components/icons/svg/SVGArena'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
@@ -17,7 +18,7 @@ import FlensDose from '../components/icons/svg/SVGFlensdose';
 import LogoNeu from '../components/icons/svg/SvgLogoNeu'
 import Image from "next/image";
 import sketchy from "theme-ui-sketchy-preset";
-import EmblaCarousel from "../components/Slider/EmblaCarousel";
+import SwiperAutoplay from "../components/Slider/Swiper";
 import NewsletterForm from '@/components/NewsletterForm'
 
 import {
@@ -59,15 +60,10 @@ export async function getStaticProps() {
   return { props: { posts } }
 }
 
+const SLIDE_COUNT = 7;
+const slides = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function Home({ posts }) {
-
-  const SLIDE_COUNT = 7;
-  const slides = Array.from(Array(SLIDE_COUNT).keys());
-
-
-
-
 
 return(
 <>
@@ -78,9 +74,8 @@ return(
   <section className="hidden lg:block lg:mx-auto lg:mt-2 lg:rounded-3xl lg:w-screen bg-slate-900 lg:h-[14vh] ">
           <div className="grid grid-cols-1 md:grid md:grid-cols-[7fr_6fr]  items-center justify-center">
                 <div className="">
-                        <h1 className=" ml-5 headingB text--600 lg:text-xl xl:text-1xl px-4 2xl:text-[3.33rem] font-black">
-                          Dein Treffpunkt in Freiburg !!!
-                        </h1>
+                        <h1 className=" ml-4 headingB text--600 lg:text-base xl:text-1xl px-4 2xl:text-[3.33rem] font-black">
+                          Dein Treffpunkt in Freiburg!</h1>
                 </div>
                 <div className="">
                 <Skyline width="100%" height="8vh" />
@@ -115,7 +110,7 @@ return(
               </div>
               {/*=============n=================================== Modale6 ende =======================================================================================*/}
 
-              <div className="-gray-700 mx-auto mt-5 bg-gray-900 shadow-lg shadow-yellow-400/50 flex w-11/12 flex-col items-center rounded-2xl border md:bg-red-900 dark:bg-gray-800 md:flex-row lg:w-11/12 ">
+              <div className="-gray-700 mx-auto mt-5 bg-gray-700 shadow-lg shadow-yellow-400/50 flex w-11/12 flex-col items-center rounded-2xl border md:bg-red-900 dark:bg-gray-800 md:flex-row lg:w-11/12 ">
                 <img className="p-3" src="/portrait-mick1.png" alt="portrait" />
                 <div className="flex w-full flex-col justify-between p-4 leading-normal">
                   <h5 className="mb-5 text-2xl font-bold tracking-tight text-yellow-500 dark:text-white xl:text-5xl">
@@ -137,7 +132,7 @@ return(
               </div>
             </div>
 
-            <div className=" left-16 mx-auto mt-[125vh] flex w-full flex-col items-start justify-start px-12 md:absolute md:-mt-40 md:w-4/12">
+            <div className=" left-16 mx-auto mt-[150vh] flex w-full flex-col items-start justify-start px-12 md:absolute md:-mt-40 md:w-4/12">
               <button
                 type="button"
                 className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 font-sans text-xl font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 md:text-4xl lg:mb-6"
@@ -150,19 +145,21 @@ return(
                   SOS Rettungsanker
                 </a>
               </button>
-              <p className="mt-5 relative z-30 text-justify text-sm text-white">
+              <div className=''>
+              <p className="mt-12 relative z-30 text-justify text-sm text-white">
                 Schreiben Sie uns gerne Ihre Eindrücke zu Ihrem Besuch im Rettungsanker. Am
                 wichtigsten aber: geben Sie uns Reflexion, wenn etwas nicht zu Ihrer Zufriedenheit
                 vorgefallen ist! Nur so können wir uns als Ihr Gastgeber stetig verbessern und Ihnen
                 als Gast zukünftig noch besser gerechtwerden.
               </p>
+              </div>
                  </div>
           </section>
 
           {/*========================== ENDE SECTION A =================================================*/}
 
            <div className="mt-15 flex flex-col md:flex md:flex-row items-baseline">
-            <div className="w-4/12 absolute left-32 transform translate-y-4 md:relative md:transform md:-translate-y-10 md:w-3/12 xl:w-2/12 xl:transform: xl:-translate-y-48">
+            <div className="w-4/12 absolute left-32 transform translate-y-36 md:relative md:transform md:-translate-y-10 md:w-3/12 xl:w-2/12 xl:transform: xl:-translate-y-48">
               <Image
                 src="/lighthousebw.svg"
                 
@@ -172,7 +169,7 @@ return(
                 width={473}
               />
             </div>
-            <div className="absolute w-4/12  left-36 p-2 transform translate-y-[37vh] md:static md:py-0 md:w-8/12 md:right-16 lg:w-3/12 xl:w-3/12 float-right md:transform md:translate-y-0 xl:transforn xl:-translate-y-[5vh]">
+            <div className=" w-4/12  left-36 p-2 transform translate-y-[68vh] sm:transform sm:-translate-y-6 md:static md:py-0 md:w-8/12 md:right-16 lg:w-3/12 xl:w-3/12 float-right md:transform md:translate-y-0 xl:transforn xl:-translate-y-[5vh]">
               <Image
                 className=""
                 src="/Astraballons.png"
@@ -182,7 +179,7 @@ return(
                 width={1739}
               />
             </div>
-          6<div className=" -order-1 right-5 absolute transform translate-y-12 md:transform:-md:translate-y-6 lg:w-3/12 xl:transform xl:translate-y-[14vh]">
+          <div className=" -order-1 right-5 absolute transform translate-y-60 md:transform:-md:translate-y-6 lg:w-3/12 xl:transform xl:translate-y-[14vh]">
               <Image
                 src="/rettungsring.png"
                 alt="illustration"
@@ -203,7 +200,7 @@ return(
           </div>
 
           {/*======================================= Section B =======================================================================*/}
-          <section className="-mt-[18vh] xl:-mt-48 xl:p-12">
+          <section className="mt[12vh] xl:-mt-48 xl:p-12">
             <div className="grid overflow-hidden grid-cols-1 md:grid md:grid-cols-3 grid-rows-2 gap-3">
               <div className="relative z-40 mx-auto w-10/12 md:w-11/12">
                 <Image
@@ -246,22 +243,17 @@ return(
 
           <section className=" xl:mt-[12vh]">
             <div className="container mx-auto rounded-2xl bg-slate-800 w-11/12">
-              <p className="lg:newspaperB lg:mt-0 text-gray-100  text-lg px-4 lg:-mb-16 lg:text-3xl lg:leading-10">
+              <p className=" text-lsm font-sans text-justify lg:newspaperB lg:mt-0 text-gray-100  text-lg px-4 lg:-mb-16 lg:text-3xl lg:leading-10">
                 Gemütlich nordisches Ambiente im Herzen der Altstadt Freiburgs
-                gelegen. Orginales Waterkant-Feeling mit Astra <Astraflasche className="hidden md:inline w-20 h-16"></Astraflasche>, Flens & Co. <FlensDose className="hidden md:inline w-20 h-12"></FlensDose>
-                Jeden Samstag Bundesliga Saison Spieltag{" "}
-                <SCLogo
-                  className="inline h-16 w-80"> 
-                </SCLogo>
-                <br /> Live in unserer{" "}
-                <Link href="/sportareNa">
+                gelegen. Orginales Waterkant-Feeling mit Astra <Astraflasche className="hidden md:inline w-20 h-16"></Astraflasche>, Flens & Co. <FlensDose className="hidden md:inline w-20 h-12"></FlensDose><br/>
+                Jeden Samstag Bundesliga Saison Spieltag des <SCLogo className="inline h-10 w-36"/> Live in unserer <Link href="/sportareNa">
                   <a className="text-yellow-600 hover:text-amber-300 hover:border-b-4 hover:border-slate-400 text-sm lg:text-4xl">
                     Sportarena.
                   </a>
                 </Link>{" "}
                 <Arena className="inline" height="70" width="90"></Arena> Bei
-                Top Spielen mit grosser Nachfrage sind Reservierungen über unser
-                Booking-Tool zu empfehlen.
+                Top Spielen des SC Freiburg mit grosser Publikumsnachfrage sind Reservierungen über unser
+                Booking-Tool zu empfehlen !!!
               </p>
             </div>
 
@@ -322,7 +314,7 @@ return(
                   <Text>
                     <p className="mt-10 text-2xl text-center text uppercase font-bold">
                       Ganter Bier
-                    </p>
+                    </p>                                                                                                                                                                                                                                                                                                                                         z
                     <p className="text-xl text-center">
                       frisches köstliches Ganter-Bräu vom Fass
                     </p>
@@ -344,9 +336,7 @@ return(
                 >
                   <div className="mx-auto border- border-gray-100">
                     <Flensburger
-                      o
-                      
-                      bject-fit="cover"
+                      object-fit="cover"
                       height="25vh"
                       width="100%"
                     ></Flensburger>
@@ -367,7 +357,7 @@ return(
           <h1 className="z-20 relative headingB text-[2rem] text-center text-gray-50 lg:headingA lg:text-yellow-500 lg:text-[4.66rem] lg:mt-20">
             Impressionen Rettungsanker
           </h1>
-          <div className="w-3/12 lg:w-3/12 lg:p-8 lg:transform lg:-translate-y-16 xl:transform xl-translate-y-16">
+          <div className="relative z-30 w-6/12 lg:w-3/12 lg:p-8 lg:transform lg:-translate-y-16 xl:transform xl-translate-y-16">
             <Image
               src="/Albers_Illu_white.png"
               alt="Impressionen"
@@ -379,9 +369,9 @@ return(
           {/*========================================================== section F ==============================================================*/}
           
             
-                      <section className=" md:-mt-60 mx-auto">
-                        <div className="mx-auto ">
-                                                <EmblaCarousel slides={slides} />
+                      <section className="  md:-mt-72 mx-auto">
+                        <div className="mx-auto border-8 w-[66.66vw] h-[36.66vh]">
+                        <SwiperAutoplay></SwiperAutoplay>
                         </div>
                         <p className="mt-2 text-xs text-white text-center lg:text-lg">Impressionen aus dem Rettungsanker</p>
 

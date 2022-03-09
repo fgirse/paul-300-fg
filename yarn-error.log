@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add heroicons-react-solid latest
+  C:\Program Files\nodejs\node.exe C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js dev
 
 PATH: 
   C:\Python310\Scripts\;C:\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;;C:\Program Files\Git LFS;C:\Program Files\nodejs\;C:\Users\fgirs\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\GitHub CLI\;C:\Users\fgirs\AppData\Roaming\npm;C:\Users\fgirs\AppData\Local\Programs\mongosh\;C:\Users\fgirs\AppData\Local\gitkraken\bin
@@ -14,21 +14,16 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/heroicons-react-solid: Not found
-      at Request.params.callback [as _callback] (C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
-      at Request.self.callback (C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
-      at Request.emit (node:events:390:28)
-      at Request.<anonymous> (C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141855:10)
-      at Request.emit (node:events:390:28)
-      at IncomingMessage.<anonymous> (C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141777:12)
-      at Object.onceWrapper (node:events:509:28)
-      at IncomingMessage.emit (node:events:402:35)
-      at endReadableNT (node:internal/streams/readable:1343:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  SyntaxError: C:\Users\fgirs\Paul-200-fg\package.json: Unexpected string in JSON at position 322
+      at JSON.parse (<anonymous>)
+      at C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\fgirs\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
 
 npm manifest: 
   {
-    "name": "tailwind-nextjs-starter-blog",
+    "name": "rettungsanker-freiburg",
     "version": "1.5.2",
     "private": true,
     "scripts": {
@@ -36,6 +31,7 @@ npm manifest:
       "dev": "next dev",
       "build": "next build && node ./scripts/generate-sitemap",
       "serve": "next start",
+      "start": "next start -p $"
       "analyze": "cross-env ANALYZE=true next build",
       "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
       "prepare": "husky install"
@@ -48,6 +44,7 @@ npm manifest:
       "@tailwindcss/typography": "^0.5.0",
       "autoprefixer": "^10.4.0",
       "axios": "^0.26.0",
+      "embla-carousel": "^6.2.0",
       "embla-carousel-autoplay": "^6.2.0",
       "embla-carousel-react": "^6.2.0",
       "esbuild": "^0.13.13",
@@ -2185,11 +2182,6 @@ Lockfile:
     dependencies:
       type-fest "^0.21.3"
   
-  ansi-regex@*:
-    version "6.0.1"
-    resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.0.1.tgz#3183e38fae9a65d7cb5e53945cd5897d0260a06a"
-    integrity sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==
-  
   ansi-regex@^2.0.0:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
@@ -3474,7 +3466,7 @@ Lockfile:
     dependencies:
       embla-carousel "6.2.0"
   
-  embla-carousel@6.2.0:
+  embla-carousel@6.2.0, embla-carousel@^6.2.0:
     version "6.2.0"
     resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-6.2.0.tgz#c16b18abe50e05ccd03d0b8d0b738f6a87aea1e0"
     integrity sha512-dSNsiQ7nmSQJZgbYfZCLdzrnznHwpaAcdJFcMRKgm/pjH1doOgxmfsvlMy4VfO4J11hLz8jm/W8WxSSDqfuu4w==
@@ -5026,7 +5018,7 @@ Lockfile:
       parent-module "^1.0.0"
       resolve-from "^4.0.0"
   
-  imurmurhash@*, imurmurhash@^0.1.4:
+  imurmurhash@^0.1.4:
     version "0.1.4"
     resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
     integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=

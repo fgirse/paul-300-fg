@@ -1,6 +1,6 @@
 import '@/css/tailwind.css'
 import '@/css/prism.css'
-import '../components/Slider/css/embla.css'
+import '../components/Slider/css/swiper.css'
 import '@fontsource/inter/variable-full.css'
 
 import { ThemeProvider } from 'next-themes'
