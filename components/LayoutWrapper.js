@@ -7,12 +7,12 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import InfoBar from '../components/InfoSection'
+import InfoSection from './Infosection'
 
 const LayoutWrapper = ({ children }) => {
   return (
     <>
-      <InfoBar/>
+      <InfoSection/>
       <SectionContainer>
         <div className="flex h-screen flex-col justify-between bg-slate-900">
           <header className="mt-2 flex items-end justify-between p-2">
